@@ -13,7 +13,8 @@ class SimpleEngine: public JagGame::TileDataEngine {
 	protected:
 	int mapwx;
 	int mapwy;
-	std::vector<SDL_Texture*> **textures;
+    std::vector<SDL_Texture*> stage;
+    SDL_Texture *resources;
 }
 
 #define __SIMPLEENGINE__
