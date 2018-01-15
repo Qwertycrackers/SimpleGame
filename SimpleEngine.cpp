@@ -14,6 +14,14 @@ SimpleEngine::SimpleEngine(SDL_Texture *r): JagGame::TileDataEngine(Cell(0,0,0),
     stage.add(orb.instance(), 7, 13);
 }
 
+SimpleEngine::~SimpleEngine() {
+    delete[] r;
+}
+
+const std::vector<SDL_Texture*> *getTextures(int x, int y) {
+    return stage.getTextures(TileDataEngine::origin.x + x, TileDataEngine::origin.y + y);
+}
+
 void SimpleEngine::setCurrentCell(Cell c) {} // Don't need for this game
 void SimpleEngine::selectCell(Cell c, SDL_Event* e) {} // Also don't need
 
