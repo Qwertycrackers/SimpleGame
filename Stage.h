@@ -19,7 +19,7 @@ class Stage {
     SDL_Texture *ground; // the ground texture
     SDL_Texture *oub; // out-of-bounds texture. Stage does not own either of these
     Tile **field; // the tiles which make up the stage. One size.
-    Entity *rosterHead; // head of the linked list of all entities on the stage
+    Entity *rosterHead = nullptr; // head of the linked list of all entities on the stage
     
 } // Stage 
 
