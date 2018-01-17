@@ -1,5 +1,4 @@
-#ifndef __STAGE__           // NOTE: This class, in retrospect, is really not a proper "C++" implementation of this idea
-#include <vector>           //       It has far too many C constructs and fails to make good use of the power C++ tools bring.
+#ifndef __STAGE__           // NOTE: This class, in retrospect, is really not a proper "C++" implementation of this idea #include <vector>           //       It has far too many C constructs and fails to make good use of the power C++ tools bring.
 #include <SDL2/SDL.h>       //       In the long run, these facts would make the class hard to maintain, but since this is merely a demo I'll just remember these lessons.
 #include <Mob.h>
 #include <Tile.h>
@@ -18,6 +17,8 @@ class Stage {
     int ywidth; // width of the stage in the y
     SDL_Texture *ground; // the ground texture
     SDL_Texture *oub; // out-of-bounds texture. Stage does not own either of these
+    std::vector<SDL_Texture*> oubStack; // hold on to the out-of-bounds texture stack
+    std::vector<SDL_Texture*> *texStack; // open pointer for returning other texture stacks
     Tile **field; // the tiles which make up the stage. One size.
     Entity *rosterHead = nullptr; // head of the linked list of all entities on the stage
     
