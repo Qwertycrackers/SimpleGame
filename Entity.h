@@ -15,3 +15,6 @@ class Entity { // Linked list manager for Stage. Hold a MobInstance for logic, a
     Entity *tileNext; // next element in the tile list
     Entity *tileLast; // last element in the tile list
 }
+
+#define __ENTITY__
+#endif
