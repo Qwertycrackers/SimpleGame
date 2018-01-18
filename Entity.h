@@ -12,6 +12,7 @@ class Entity { // Linked list manager for Stage. Hold a MobInstance for logic, a
     inline void removeFromRoster(); // remove this entity from its roster list, shrinking it
     const MobInstance &getMob(); // get the MobInstance owned by this Entity
     Entity *rosterNext = nullptr; // next element in the roster list
+    Entity *rosterLast = nullptr;
     Entity *tileNext = nullptr; // next element in the tile list
     Entity *tileLast = nullptr; // last element in the tile list
     protected:
