@@ -3,7 +3,7 @@
 #include <memory>
 #include <utility>
 #include <SDL2/SDL.h>
-#include "JgTileDataEngine.h"
+#include <jaggame/JgTileDataEngine.h> // first time I've ever included my own header with <>
 #include "Stage.h"
 #include "Mob.h"
 #include "Mind.h"
