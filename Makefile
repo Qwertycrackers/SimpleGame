@@ -1,3 +1,3 @@
 
 all: *.cpp *.h
-	g++ -o simplegame -I../jaggame/include -L../jaggame/linux -lSDL2 -lSDL_image -ljaggame $(wildcard *.cpp)
+	g++ -o simplegame -lSDL2 -lSDL_image -ljaggame $(wildcard *.cpp)
